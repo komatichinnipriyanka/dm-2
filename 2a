@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int main() {
+    int data[10], n, i, sum = 0;
+
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    printf("Enter values:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &data[i]);
+        sum += data[i];
+    }
+
+    printf("Preprocessed Data:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", data[i]);
+
+    printf("\nTotal items = %d", n);
+    printf("\nSum = %d", sum);
+
+    printf("\nAssociation: Items are analyzed for frequent patterns.");
+
+    return 0;
+}
+#output
+Enter number of items: 5
+Enter values:
+10 20 30 40 50
+
+Preprocessed Data:
+10 20 30 40 50
+Total items = 5
+Sum = 150
+Association: Items are analyzed for frequent patterns.
