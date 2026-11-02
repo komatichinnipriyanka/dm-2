@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int main() {
+    int a[50], i, count = 0, n;
+
+    printf("Enter number of bits: ");
+    scanf("%d", &n);
+
+    printf("Enter bits: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("Stuffed data: ");
+
+    for(i = 0; i < n; i++) {
+        printf("%d", a[i]);
+
+        if(a[i] == 1)
+            count++;
+        else
+            count = 0;
+
+        if(count == 5) {
+            printf("0");
+            count = 0;
+        }
+    }
+
+    return 0;
+}
+#output
+Enter number of bits: 8
+Enter bits: 1 1 1 1 1 1 0 1
+
+Stuffed data: 1111100101
